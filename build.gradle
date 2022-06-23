@@ -10,15 +10,16 @@ repositories {
 }
 
 dependencies {
-    // JUnit
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
-    testImplementation 'org.junit.platform:junit-platform-suite:1.9.0-M1'
+    // TestNG
+    testImplementation 'org.testng:testng:7.6.0'
     // Cucumber
     implementation 'io.cucumber:cucumber-java:7.4.0'
-    testImplementation 'io.cucumber:cucumber-junit-platform-engine:7.4.0'
+    implementation 'io.cucumber:cucumber-testng:7.4.0'
+
 }
 
 test {
-    useJUnitPlatform()
+    include('**/*Test*')
+    useTestNG()
+    scanForTestClasses = false
 }

@@ -1,10 +1,13 @@
 package ru.nspk.calculator.test;
 
-import org.junit.platform.suite.api.SelectClasspathResource;
-import org.junit.platform.suite.api.Suite;
 
-@Suite
-@SelectClasspathResource("features")
-public class CalculatorTest {
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+
+@CucumberOptions(
+        features = "src/test/resources/features",
+        glue = { "ru.nspk.calculator.test.steps" }
+)
+public class CalculatorTest extends AbstractTestNGCucumberTests {
 
 }

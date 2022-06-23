@@ -5,8 +5,8 @@ import io.cucumber.java.ru.Пусть;
 import io.cucumber.java.ru.Тогда;
 import ru.nspk.calculator.Calculator;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.testng.Assert.assertThrows;
+import static org.testng.AssertJUnit.assertEquals;
 
 public class CalculatorSteps {
 
